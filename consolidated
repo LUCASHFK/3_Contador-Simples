@@ -1,0 +1,123 @@
+from IPython.display import HTML
+
+HTML("""
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+    background-color:#333232;
+    font-family:Arial,sans-serif;
+}
+
+h1{
+    text-align:center;
+    color:white;
+}
+
+#container{
+    height:220px;
+    width:500px;
+    border:10px solid #926981;
+    margin:auto;
+    margin-top:50px;
+    background-color:#888169;
+    text-align:center;
+    border-radius:10px;
+}
+
+#number{
+    height:50px;
+    width:250px;
+    line-height:50px;
+    margin:auto;
+    margin-top:40px;
+    border:1px solid black;
+    background:white;
+    font-size:28px;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+button{
+    height:45px;
+    width:120px;
+    font-size:22px;
+    cursor:pointer;
+    margin:0 15px;
+    border:none;
+    border-radius:5px;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#increment{
+    background:#4CAF50;
+    color:white;
+}
+
+#decrement{
+    background:#d9534f;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Counter</h1>
+
+<div id="container">
+
+    <div id="number">0</div>
+
+    <div class="buttons">
+        <button id="increment">+</button>
+        <button id="decrement">−</button>
+    </div>
+
+</div>
+
+<script>
+
+let counter = 0;
+
+const numberDisplay =
+document.getElementById("number");
+
+document
+.getElementById("increment")
+.addEventListener("click", function(){
+
+    counter++;
+
+    numberDisplay.innerHTML = counter;
+
+});
+
+document
+.getElementById("decrement")
+.addEventListener("click", function(){
+
+    counter--;
+
+    numberDisplay.innerHTML = counter;
+
+});
+
+</script>
+
+</body>
+</html>
+""")
